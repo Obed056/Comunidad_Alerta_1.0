@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-item-img>
+    <img class="imgLogo" src="assets/img/logodc.PNG"></ion-item-img>
+
+  <ion-card-header class="InicieLogin">
+    <ion-card-title> <strong>COMUNIDAD ALERTA</strong></ion-card-title>
+    <ion-labeL id="fraseLogin">Apoyando la comunidad ante eventos de desastre</ion-labeL>
+  </ion-card-header>
+
+  <!--<ion-card class="cardLog">-->
+    <form class="formLogin" [formGroup]="formularioLogin">
+      <ion-item class="itemNLogin">
+        <ion-icon class="personIcon" name="person-outline"></ion-icon>
+        <ion-input placeholder="Introduzca su usuario" ></ion-input>
+      </ion-item>
+      <ion-item class="itemPLogin">
+        <ion-icon class="iconloked" name="lock-closed-outline"></ion-icon>
+        <ion-input placeholder="Introduzca su contraseña"></ion-input>
+      </ion-item>
+    </form>
+    
+    <br>
+    <ion-toolbar class="toolbarbtnIniciar">
+      <ion-buttons class="btnIniciar">
+        <ion-button class="LetrabtnIniciar" (click)="ingresar()">INICIAR</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+<!--</ion-card>-->
+</ion-content>
+<div class="fraseCuenta">
+  <ion-labeL>No tienes cuenta?</ion-labeL>
+</div>
+  <ion-toolbar class="toolbarbtn">
+    <ion-buttons class="btnCrear">
+      <ion-button class="LetrabtnCrear" [routerLink]="['/registro']">CREAR</ion-button>
+    </ion-buttons>
+  </ion-toolbar>

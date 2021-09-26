@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="folder/Bienvenido"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Desaparecidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="repDesaparecido">
+    <ion-card-header>
+      <ion-card-title class="titulorepDesaparecido"><strong>Reportar Desaparecido</strong></ion-card-title><br>
+      <input class="fecha" type="datetime-local" name="" id="timer">
+      <ion-input class="tel" type="number" value="" placeholder="telefono">Mi Telefono:</ion-input>
+      <ion-input type="text" value="" placeholder="completo">Mi Nombre:</ion-input>
+      <ion-input type="text" value="" placeholder="calle, No., sector,ciudad">Direccion:</ion-input>
+      <ion-input type="email" value="" placeholder="correo">Mi Correo:</ion-input>
+     <br>
+      <ion-card>
+        <ion-input type="text" value="" placeholder="nombre completo">Desaparecido:</ion-input>
+      </ion-card>
+      <ion-card>
+        <ion-input type="number" value="" placeholder="cedula">Cedula:</ion-input>
+      </ion-card>
+      <ion-button class="btnEnviar" color="secondary" (click)="enviar()">Enviar</ion-button>
+
+    </ion-card-header>
+  </ion-card>
+</ion-content>

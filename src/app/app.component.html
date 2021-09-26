@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+
+          <!-- titulo del menu y foto-->
+            <ion-chip class="fotoespacio">
+              <ion-avatar class="avat">
+                <img class="logo" src="assets/img/logodc.PNG">
+              </ion-avatar>
+              <ion-label id="lt" class="letra">Comunidad Alerta</ion-label>
+            </ion-chip>
+       
+          <ion-list-header> ALERTAR AHORA </ion-list-header>
+          <ion-note>809-588-3279 / 809-244-0598</ion-note>
+          <!-- divisor -->
+          <ion-item class="item-top"></ion-item>
+            <!-- lista de servicio que ofrecemos -->
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>NUESTRA UBICACION S.F.M.</ion-list-header>
+          <!-- google mapa ubicacion de la defensa civil san Fco. -->
+          <iframe class="embedGoogleMap" width="100%" height="150%" style="border: 1px solid rgb(255, 255, 255)" src="https://www.google.com/maps?q=19.292107663188016, -70.25076798221048&amp;z=14&amp;t=m&amp;hl=es&amp;output=embed"></iframe>
+          
+          <div class="itemIntroText" slot="start"> 
+            <p>&nbsp;NUMEROS DE EMERGENCIAS</p> 
+          </div>
+            <!-- contenedor de numeros -->
+          <!-- <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon name="call"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item> -->
+          <div class="numerosE">
+            <ion-icon name="call"></ion-icon>
+            <a href="tel:+18095883279">Defensa Civil S.F.M</a><br><br>
+            <ion-icon name="call"></ion-icon>
+            <a href="tel:+18095888111">Cruz Rojas S.F.M</a><br><br>
+            <ion-icon name="call"></ion-icon>
+            <a href="tel:+18097251462">Policia Nacional RN</a><br><br>
+            <ion-icon name="call"></ion-icon>
+            <a href="tel:+18095882232">Bomberos SFM</a><br>
+            <br>
+            <!-- derechos reservados-->
+            <ion-item></ion-item>
+            <div> 
+            <p style="color: #ffffff !important;" class="visible-xs">2021.Todos los derechos reservados</p><br>
+            <p style="color: #ffffff !important;" class="visible-xs" >República Dominicana</p>
+            <br>
+          </div>
+          </div>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

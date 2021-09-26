@@ -1,0 +1,105 @@
+// ion-menu-button {
+//   color: var(--ion-color-primary);
+// }
+ion-menu-button{
+  color: #ffffff;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#container0{
+  height: 100%;
+}
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 18;
+  line-height: 22px;
+  color: #06070c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+.txtfooter{
+  text-align: center;
+  font-size: 12px ;
+  height: auto;
+  line-height: 1pt;
+}
+.imgfondo{
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+}
+.tolbar42px{
+  height: 42px;
+  margin-top: -1.5%;
+}
+.cuadrado{
+  height: auto; 
+  //margin-top: auto;
+  background: #F8F9FE;
+  width: 100%;
+  color: #5f6066;
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.txttoolbar43{
+  text-align: center;
+  font-size: 12px ;
+  height: 4px;
+  line-height: 8.5pt;
+  margin-top: -3%;
+}
+//--Iconos de servicio pagina bienvenida--//
+/* .icon1{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.icontitulo{
+  font-size: 11px;
+  margin-left: -1%;
+  color: #646363;
+  word-spacing: 1em;
+} */
+.icontitulo2{
+  font-size: 11px;
+  text-align: center;
+  color: #6b6b6b;
+}
+.divImg{
+  width: 20%;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  
+}
+.divImg > p{
+  
+  font-size: 15px;
+  margin-top: 1%;
+  text-align: center;
+ 
+}
+.divImg > img{
+  object-fit: cover;
+  display: block;
+  //width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto;
+}
+
