@@ -39,7 +39,7 @@ ion-menu-button{
 }
 .imgfondo{
   max-width: 100%;
-  height: 100%;
+  height: 50%;
   width: 100%;
 }
 .tolbar42px{
@@ -47,14 +47,16 @@ ion-menu-button{
   margin-top: -1.5%;
 }
 .cuadrado{
-  height: auto; 
-  //margin-top: auto;
+  
+  margin-top: -30px;
   background: #F8F9FE;
   width: 100%;
   color: #5f6066;
   display: inline-flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0,0,6,0 rgba(0,0,0,.5);
 }
 .txttoolbar43{
   text-align: center;
@@ -89,7 +91,7 @@ ion-menu-button{
 }
 .divImg > p{
   
-  font-size: 15px;
+  font-size: 8px;
   margin-top: 1%;
   text-align: center;
  
@@ -102,4 +104,12 @@ ion-menu-button{
   margin-right: auto;
   padding: auto;
 }
-
+ion-card-content{
+  background-color: white;
+  margin-top: 9%;
+  
+}
+ion-card{
+  background-color: white;
+  margin-top: 10%;
+}
