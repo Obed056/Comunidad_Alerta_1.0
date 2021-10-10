@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import {FirebaseServiceService} from '../Services/firebase-service.service';
 
 @Component({
   selector: 'app-inundaciones',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InundacionesPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private services: FirebaseServiceService ) { }
+ 
   ngOnInit() {
+    this.services.getInundaciones();
+   
   }
-
+  OnSubmit(InundacionForm: NgForm){
+   this.services.insertarInundaciones(InundacionForm.value);
+  
+  }
 }

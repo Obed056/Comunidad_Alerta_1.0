@@ -12,18 +12,23 @@
   </ion-header>
   <ion-content>
     <div class="imgCabeza"> 
-      <img width="60 dp" class="imgfondo"  src="assets/img/awesome-shield-alt.png">
+      <img width="60 dp" class="imgfondo"  src="assets/img/terremoto.png">
       <p class="Emergencia">Datos de la emergencia</p>
     </div>
     <ion-card color="lingt">
-      <ion-grid>
+      <form #RescateForm="ngForm" (ngSubmit)="OnSubmit(RescateForm)"><ion-grid>
         <ion-row>
           <ion-col size="auto">
             <div class="img"><img width="38 dp" class="imgfondo"  src="assets/img/circle-people.png"></div>
           </ion-col>
           <ion-col>
-            <div class="input">
-              <input type="text" placeholder="Su Nombre" >
+            <div class="input form-Group" >
+              <input type="text" 
+               class="form-control"
+               name="name"
+               #name="ngModel"
+               [(ngModel)]="services.selectTInundacion.name"
+              placeholder="Su Nombre" >
             </div>
           </ion-col>
         </ion-row>
@@ -33,7 +38,12 @@
           </ion-col>
           <ion-col>
             <div class="input">
-              <input type="text" placeholder="Direccion de la emergencia" >
+              <input type="text" 
+              class="form-control"
+              name="locacion"
+              #location="ngModel"
+              [(ngModel)]="services.selectTInundacion. locacion"
+              placeholder="Direccion de la emergencia" >
             </div>
           </ion-col>
         </ion-row>
@@ -43,21 +53,31 @@
           </ion-col>
           <ion-col>
             <div class="input">
-              <input type="text" placeholder="Telefono de contacto" >
+              <input type="text" 
+              class="form-control"
+              name="telefone"
+              #telefono="ngModel"
+              [(ngModel)]="services.selectTInundacion.telefone"
+              placeholder="Telefono de contacto" >
             </div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col >
             <div class="Descripcion">
-              <textarea name="text" placeholder="Breve descripcion de la emergencia"></textarea>
+              <textarea name="text"
+              class="form-control"
+              name="description"
+              #descripcion="ngModel"
+              [(ngModel)]="services.selectTInundacion.description"
+               placeholder="Breve descripcion de la emergencia"></textarea>
             </div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col >
             <div class="btn">
-              <ion-button color="tertiary" size="block" shape="round">
+              <ion-button color="tertiary" size="block" shape="round" type="submit">
                 Enviar
                 <ion-icon slot="end" name=""></ion-icon>
               </ion-button>
@@ -65,6 +85,8 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+    </form>
+      
     </ion-card>
     
   </ion-content>
