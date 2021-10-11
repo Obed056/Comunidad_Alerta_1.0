@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import {AngularFirestore} from "@angular/fire/compat/firestore"
 import {AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
-import { Terremoto } from '../models/terremoto';
 import { Logica } from '../models/logica';
 
 @Injectable({
@@ -30,72 +28,84 @@ export class FirebaseServiceService {
   constructor(private firebase: AngularFireDatabase) { }
 
   getTerremoto(){
-   return this.TerremotoList=this.firebase.list('Terremoto')
+   return this.TerremotoList=this.firebase.list('Emergencias')
    }
-  insertarTerremoto(terremoto: Logica){
+  insertarTerremoto(logica: Logica){
+    logica.tipoemergencia = "Terremoto";
     this.TerremotoList.push({
-      name: terremoto.name,
-      location: terremoto.locacion,
-      telefono: terremoto.telefone,
-      descripcion: terremoto.description
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
     });
   } 
    getInundaciones(){
-    return this.InundacionesList=this.firebase.list('Inundacion')
+    return this.InundacionesList=this.firebase.list('Emergencias')
     }
-  insertarInundaciones(inundaciones: Logica){
+  insertarInundaciones(logica: Logica){
+    logica.tipoemergencia="Inundación"
     this.InundacionesList.push({
-      name: inundaciones.name,
-      location: inundaciones.locacion,
-      telefono: inundaciones.telefone,
-      descripcion: inundaciones.description
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
     });
   }
   getDespeje(){
-    return this.DespejeList=this.firebase.list('DespejeDeArbol')
+    return this.DespejeList=this.firebase.list('Emergencias')
     }
   insertarDespeje(logica: Logica){
+    logica.tipoemergencia="DespejeDeArbol"
     this.DespejeList.push({
-      name: logica.name,
-      location: logica.locacion,
-      telefono: logica.telefone,
-      descripcion: logica.description
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
     });
   }
 
   getDeslizamiento(){
-    return this.DeslizamientoList=this.firebase.list('Deslizamiento')
+    return this.DeslizamientoList=this.firebase.list('Emergencias')
     }
   insertarDeslizamiento(logica: Logica){
+    logica.tipoemergencia="Deslizamiento"
     this.DeslizamientoList.push({
-      name: logica.name,
-      location: logica.locacion,
-      telefono: logica.telefone,
-      descripcion: logica.description
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
     });
   }
   
   getRescate(){
-    return this.RescateList=this.firebase.list('Rescate')
+    return this.RescateList=this.firebase.list('Emergencias')
     }
   insertarRescate(logica: Logica){
+    logica.tipoemergencia="Rescate"
     this.RescateList.push({
-      name: logica.name,
-      location: logica.locacion,
-      telefono: logica.telefone,
-      descripcion: logica.description
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
     });
   }
 
   getDesaparecido(){
-    return this.DesaparecidoList=this.firebase.list('Desaparecido')
+    return this.DesaparecidoList=this.firebase.list('Emergencias')
     }
   insertarDesaparecido(logica: Logica){
+    logica.tipoemergencia="Desaparecido"
     this.DesaparecidoList.push({
-      name: logica.name,
-      location: logica.locacion,
-      telefono: logica.telefone,
-      descripcion: logica.description
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
     });
   }
 }

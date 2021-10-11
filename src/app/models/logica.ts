@@ -1,6 +1,8 @@
 export class Logica {
-    name: string;
-    locacion: string;
-    telefone: string;
-    description: string;
+    tipoemergencia: string;
+    nombrepersona: string;
+    direccion: string;
+    telefono: string;
+    descripcion: string;
 }
+
