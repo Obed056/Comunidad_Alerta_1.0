@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { FirebaseServiceService } from '../Services/firebase-service.service';
 
 @Component({
   selector: 'app-desaparecidos',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesaparecidosPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private services: FirebaseServiceService ) { }
+ 
   ngOnInit() {
+    this.services.getDesaparecido();
+   
   }
-
+  OnSubmit(DesaparecidoForm: NgForm){
+   this.services.insertarDesaparecido(DesaparecidoForm.value);
+  
+  }
 }

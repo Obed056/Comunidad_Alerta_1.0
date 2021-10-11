@@ -5,7 +5,8 @@
 </ion-header> -->
 
 <ion-content>
-  <ion-item-img>
+  <div class="contenedor">
+    <ion-item-img>
     <img class="imgLogo" src="assets/img/logodc.PNG"></ion-item-img>
 
   <ion-card-header class="InicieLogin">
@@ -31,13 +32,16 @@
         <ion-button class="LetrabtnIniciar" (click)="ingresar()">INICIAR</ion-button>
       </ion-buttons>
     </ion-toolbar>
-<!--</ion-card>-->
+   <!--</ion-card>-->
+   <div class="fraseCuenta">
+    <ion-labeL>No tienes cuenta?</ion-labeL>
+  </div>
+    <ion-toolbar class="toolbarbtn">
+      <ion-buttons class="btnCrear">
+        <ion-button size="large" class="LetrabtnCrear" [routerLink]="['/registro']">CREAR</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  
+  </div>
+  
 </ion-content>
-<div class="fraseCuenta">
-  <ion-labeL>No tienes cuenta?</ion-labeL>
-</div>
-  <ion-toolbar class="toolbarbtn">
-    <ion-buttons class="btnCrear">
-      <ion-button class="LetrabtnCrear" [routerLink]="['/registro']">CREAR</ion-button>
-    </ion-buttons>
-  </ion-toolbar>

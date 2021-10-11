@@ -6,28 +6,87 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Desaparecidos</ion-title>
+    <ion-title>personas Desaperecida</ion-title>
   </ion-toolbar>
+  
 </ion-header>
-
 <ion-content>
-  <ion-card class="repDesaparecido">
-    <ion-card-header>
-      <ion-card-title class="titulorepDesaparecido"><strong>Reportar Desaparecido</strong></ion-card-title><br>
-      <input class="fecha" type="datetime-local" name="" id="timer">
-      <ion-input class="tel" type="number" value="" placeholder="telefono">Mi Telefono:</ion-input>
-      <ion-input type="text" value="" placeholder="completo">Mi Nombre:</ion-input>
-      <ion-input type="text" value="" placeholder="calle, No., sector,ciudad">Direccion:</ion-input>
-      <ion-input type="email" value="" placeholder="correo">Mi Correo:</ion-input>
-     <br>
-      <ion-card>
-        <ion-input type="text" value="" placeholder="nombre completo">Desaparecido:</ion-input>
-      </ion-card>
-      <ion-card>
-        <ion-input type="number" value="" placeholder="cedula">Cedula:</ion-input>
-      </ion-card>
-      <ion-button class="btnEnviar" color="secondary" (click)="enviar()">Enviar</ion-button>
-
-    </ion-card-header>
+  <div class="imgCabeza"> 
+    <img width="60 dp" class="imgfondo"  src="assets/img/terremoto.png">
+    <p class="Emergencia">Datos de la emergencia</p>
+  </div>
+  <ion-card color="lingt">
+    <form #DesaparecidoForm="ngForm" (ngSubmit)="OnSubmit(DesaparecidoForm)"><ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <div class="img"><img width="38 dp" class="imgfondo"  src="assets/img/circle-people.png"></div>
+        </ion-col>
+        <ion-col>
+          <div class="input form-Group" >
+            <input type="text" 
+             class="form-control"
+             name="nombrepersona"
+             #name="ngModel"
+             [(ngModel)]="services.selectTInundacion.nombrepersona"
+            placeholder="Su Nombre" >
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="auto">
+          <div  class="img" ><img width="30  dp" class="imgfondo"  src="assets/img/location.png" id="img1"></div>
+        </ion-col>
+        <ion-col>
+          <div class="input">
+            <input type="text" 
+            class="form-control"
+            name="direccion"
+            #location="ngModel"
+            [(ngModel)]="services.selectTInundacion.direccion"
+            placeholder="Direccion de la emergencia" >
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="auto">
+          <div class="img"><img width="32 dp"  class="imgfondo"  src="assets/img/telefono.png" id="img2"></div>
+        </ion-col>
+        <ion-col>
+          <div class="input">
+            <input type="text" 
+            class="form-control"
+            name="telefono"
+            #telefono="ngModel"
+            [(ngModel)]="services.selectTInundacion.telefono"
+            placeholder="Telefono de contacto" >
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          <div class="Descripcion">
+            <textarea name="text"
+            class="form-control"
+            name="descripcion"
+            #descripcion="ngModel"
+            [(ngModel)]="services.selectTInundacion.descripcion"
+             placeholder="Breve descripcion de la emergencia"></textarea>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          <div class="btn">
+            <ion-button color="tertiary" size="block" shape="round" type="submit">
+              Enviar
+              <ion-icon slot="end" name=""></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+    
   </ion-card>
+  
 </ion-content>

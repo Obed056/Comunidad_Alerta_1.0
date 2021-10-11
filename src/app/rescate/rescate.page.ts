@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { FirebaseServiceService } from '../Services/firebase-service.service';
 
 @Component({
   selector: 'app-rescate',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RescatePage implements OnInit {
 
-  constructor() { }
-
+  constructor(private services: FirebaseServiceService ) { }
+ 
   ngOnInit() {
+    this.services.getRescate();
+   
+  }
+  OnSubmit(DeslizamientoForm: NgForm){
+   this.services.insertarRescate(DeslizamientoForm.value);
+  
   }
 
 }

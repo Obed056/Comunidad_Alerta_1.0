@@ -1,9 +1,16 @@
-.ion-text-justify p{   
-    font-weight: 300px;
-    text-align: center;
-    color: black;
-    margin-left: 12px;
+ion-card{
+    color: white;
 }
-.ion-text-justify{
+.contenedor{
+    background-color: #F78229;
+    height: 100%;
     width: 100%;
+  }
+  ion-header{
+      height: 30px;
+  }
+  .imgHome img{
+    margin-left: 40%;
+    margin-top: 40px;
+ 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { FirebaseServiceService } from '../Services/firebase-service.service';
 
 @Component({
   selector: 'app-deslizamiento',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeslizamientoPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private services: FirebaseServiceService ) { }
+ 
   ngOnInit() {
+    this.services.getDeslizamiento();
+   
   }
-
+  OnSubmit(DeslizamientoForm: NgForm){
+   this.services.insertarDeslizamiento(DeslizamientoForm.value);
+  
+  }
 }
