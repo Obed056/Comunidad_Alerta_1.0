@@ -1,16 +1,26 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+* {
+
+  font-family: 'Roboto', sans-serif !important;
+
+}
+</style>
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-back-button defaultHref="folder/Bienvenido"></ion-back-button>
+      <ion-back-button defaultHref="folder/Bienvenidos"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Visualizar Albergues</ion-title>
+    <ion-title><strong>Albergues</strong></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="container overflow-hidden">
   <div class="contenedor">
     <div class="imgHome"> 
       <img width="50 dp" class="imgfondo"  src="assets/img/home.png">
@@ -29,11 +39,8 @@
         <p></p>
         </div> -->
         <ion-card >
-          <ion-card-content mode="ios">
-            Los Albergues funcional de manera temporal para personas 
-            necesitadas o que fueron afectada por 
-            algun fenmeno natural o adversos, estos establecieminetos támbien llamado refugios temporales, 
-            alojan distintas cantidades de personas.
+          <ion-card-content >
+            Los Albergues funcionan de manera temporal para personas necesitadas o que fueron afectada por algún fenómeno natural o adversos, estos establecimientos también llamado refugios temporales, alojan distintas cantidades de personas.
           </ion-card-content>
         </ion-card>
     
@@ -50,7 +57,7 @@
     </div>
     
   </div>
-    
+</div>
 
 </ion-content>
 

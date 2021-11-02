@@ -1,10 +1,9 @@
 ion-card{
     color: white;
 }
-.contenedor{
-    background-color: #F78229;
-    height: 100%;
-    width: 100%;
+  .container{
+      height: 100%;
+      background-color: #F78229;
   }
   ion-header{
       height: 30px;
@@ -12,5 +11,4 @@ ion-card{
   .imgHome img{
     margin-left: 40%;
     margin-top: 40px;
- 
 }

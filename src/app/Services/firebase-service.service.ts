@@ -7,19 +7,14 @@ import { Logica } from '../models/logica';
 })
 export class FirebaseServiceService {
   
-  TerremotoList: AngularFireList<any>;
-  selectTerremoto: Logica = new Logica();
   
-  InundacionesList: AngularFireList<any>;
+
+  Reportes: AngularFireList<any>;
+  Alerta: AngularFireList<any>;
+  selectTerremoto: Logica = new Logica();
   selectTInundacion: Logica = new Logica();
-
-  DespejeList: AngularFireList<any>;
   selectDespeje: Logica = new Logica();
-
-  DeslizamientoList: AngularFireList<any>;
   selectDeslizamiento: Logica = new Logica();
-
-  RescateList: AngularFireList<any>;
   selectRescate: Logica = new Logica();
 
   DesaparecidoList: AngularFireList<any>;
@@ -27,12 +22,23 @@ export class FirebaseServiceService {
 
   constructor(private firebase: AngularFireDatabase) { }
 
-  getTerremoto(){
-   return this.TerremotoList=this.firebase.list('Emergencias')
-   }
+ 
+   getReportes(){
+    return this.Reportes=this.firebase.list('Reportes')   
+    }
+    getAlerta(){
+      return this.Alerta=this.firebase.list('Emergencias')   
+      }
   insertarTerremoto(logica: Logica){
     logica.tipoemergencia = "Terremoto";
-    this.TerremotoList.push({
+    this.Alerta.push({
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
+    });
+    this.Reportes.push({
       tipoemergencia: logica.tipoemergencia,
       nombredepersona: logica.nombrepersona,
       direccion: logica.direccion,
@@ -40,12 +46,17 @@ export class FirebaseServiceService {
       descripcion: logica.descripcion
     });
   } 
-   getInundaciones(){
-    return this.InundacionesList=this.firebase.list('Emergencias')
-    }
+
   insertarInundaciones(logica: Logica){
     logica.tipoemergencia="Inundación"
-    this.InundacionesList.push({
+    this.Alerta.push({
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
+    });
+    this.Reportes.push({
       tipoemergencia: logica.tipoemergencia,
       nombredepersona: logica.nombrepersona,
       direccion: logica.direccion,
@@ -53,12 +64,16 @@ export class FirebaseServiceService {
       descripcion: logica.descripcion
     });
   }
-  getDespeje(){
-    return this.DespejeList=this.firebase.list('Emergencias')
-    }
   insertarDespeje(logica: Logica){
-    logica.tipoemergencia="DespejeDeArbol"
-    this.DespejeList.push({
+    logica.tipoemergencia="Despeje de Arbol"
+    this.Alerta.push({
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
+    });
+    this.Reportes.push({
       tipoemergencia: logica.tipoemergencia,
       nombredepersona: logica.nombrepersona,
       direccion: logica.direccion,
@@ -67,12 +82,16 @@ export class FirebaseServiceService {
     });
   }
 
-  getDeslizamiento(){
-    return this.DeslizamientoList=this.firebase.list('Emergencias')
-    }
   insertarDeslizamiento(logica: Logica){
     logica.tipoemergencia="Deslizamiento"
-    this.DeslizamientoList.push({
+    this.Alerta.push({
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
+    });
+    this.Reportes.push({
       tipoemergencia: logica.tipoemergencia,
       nombredepersona: logica.nombrepersona,
       direccion: logica.direccion,
@@ -81,12 +100,17 @@ export class FirebaseServiceService {
     });
   }
   
-  getRescate(){
-    return this.RescateList=this.firebase.list('Emergencias')
-    }
+
   insertarRescate(logica: Logica){
     logica.tipoemergencia="Rescate"
-    this.RescateList.push({
+    this.Alerta.push({
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona,
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
+    });
+    this.Reportes.push({
       tipoemergencia: logica.tipoemergencia,
       nombredepersona: logica.nombrepersona,
       direccion: logica.direccion,
@@ -95,12 +119,16 @@ export class FirebaseServiceService {
     });
   }
 
-  getDesaparecido(){
-    return this.DesaparecidoList=this.firebase.list('Emergencias')
-    }
   insertarDesaparecido(logica: Logica){
     logica.tipoemergencia="Desaparecido"
-    this.DesaparecidoList.push({
+    this.Alerta.push({
+      tipoemergencia: logica.tipoemergencia,
+      nombredepersona: logica.nombrepersona, 
+      direccion: logica.direccion,
+      telefono: logica.telefono,
+      descripcion: logica.descripcion
+    });
+    this.Reportes.push({
       tipoemergencia: logica.tipoemergencia,
       nombredepersona: logica.nombrepersona,
       direccion: logica.direccion,

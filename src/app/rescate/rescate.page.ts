@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import Swal from 'sweetalert2';
+import { Logica } from '../models/logica';
 import { FirebaseServiceService } from '../Services/firebase-service.service';
 
 @Component({
@@ -12,12 +14,23 @@ export class RescatePage implements OnInit {
   constructor(private services: FirebaseServiceService ) { }
  
   ngOnInit() {
-    this.services.getRescate();
+    this.services.getAlerta();
+    this.services.getReportes();
    
   }
-  OnSubmit(DeslizamientoForm: NgForm){
-   this.services.insertarRescate(DeslizamientoForm.value);
+  OnSubmit(RescateForm: NgForm){
+   this.services.insertarRescate(RescateForm.value);
+   this.resetForm(RescateForm)
+   Swal.fire(
+    'Alerta Enviada',
+    'Reporte Enviado',
+    'success'
+  )
   
   }
-
+  resetForm(RescateForm: NgForm){
+    if(RescateForm != null)
+    RescateForm.reset();
+    this.services.selectRescate=new Logica();
+  }
 }

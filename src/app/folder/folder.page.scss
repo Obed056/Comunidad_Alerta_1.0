@@ -41,6 +41,7 @@ ion-menu-button{
   max-width: 100%;
   height: 50%;
   width: 100%;
+  object-position:0px 25px;
 }
 .tolbar42px{
   height: 42px;
@@ -59,27 +60,22 @@ ion-menu-button{
   box-shadow: 0,0,6,0 rgba(0,0,0,.5);
 }
 .txttoolbar43{
+  font-size: 0.8em ;
+  line-height: 13px !important;
+  font-weight: 600;
+  margin-bottom: 10px !important;
+  color: white !important;
   text-align: center;
-  font-size: 12px ;
-  height: 4px;
-  line-height: 8.5pt;
-  margin-top: -3%;
+  margin-top: -3px !important;
 }
 //--Iconos de servicio pagina bienvenida--//
-/* .icon1{
-  margin-left: 10%;
-  margin-top: 10%;
-}
-.icontitulo{
-  font-size: 11px;
-  margin-left: -1%;
-  color: #646363;
-  word-spacing: 1em;
-} */
+
 .icontitulo2{
-  font-size: 11px;
+  font-size: 0.8em;
   text-align: center;
-  color: #6b6b6b;
+  color: #0a0a0a !important; 
+  font-weight: 400;
+
 }
 .divImg{
   width: 20%;
@@ -99,14 +95,13 @@ ion-menu-button{
 .divImg > img{
   object-fit: cover;
   display: block;
-  //width: 30px;
   margin-left: auto;
   margin-right: auto;
   padding: auto;
 }
 ion-card-content{
   background-color: white;
-  margin-top: 9%;
+  margin-bottom: 30px;
   
 }
 ion-card{

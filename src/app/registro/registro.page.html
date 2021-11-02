@@ -14,7 +14,7 @@
         <ion-card-title>Datos</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+      <!--   <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
           <ion-item>
             <ion-label  position="floating">Nombre</ion-label>
             <ion-input formControlName="nombre"></ion-input>
@@ -29,6 +29,17 @@
           </ion-item>
           <br>
           <ion-button (click)="guardar()">Registrarse</ion-button>
+        </form> -->
+        <form>
+         <div class="login">
+          <input type="text" #email required placeholder="Usuario">
+          <input type="password" #password required placeholder="Contraseña">
+         </div>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" (click)="onRegister(email, password)" expand="block">Register</ion-button>
+            </ion-col>
+          </ion-row>
         </form>
       </ion-card-content>
       <ion-card-title class="text-down">Defensa Civil Dominicana</ion-card-title>

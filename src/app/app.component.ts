@@ -11,7 +11,7 @@ export class AppComponent {
     { title: 'Deslizamientos', url: 'deslizamiento', icon: 'Earth' },
     { title: 'Inundaciones', url: 'inundaciones', icon: 'rainy' },
     { title: 'Rescate', url: 'rescate', icon: 'shield-checkmark' },
-    { title: 'Persona Desaparecidas', url: 'desaparecidos', icon: 'accessibility' },
+    { title: 'Personas Desaparecidas', url: 'desaparecidos', icon: 'accessibility' },
     { title: 'Terremoto', url: 'terremoto', icon: 'barcode' },
     { title: 'Despeje de Árbol', url: 'despeje', icon: 'leaf' },
     { title: 'Albergues', url: 'albergues', icon: 'home' },
