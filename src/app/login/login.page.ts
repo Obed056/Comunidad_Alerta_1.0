@@ -6,6 +6,9 @@ import {
   Validators,
   FormBuilder
  } from '@angular/forms';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +19,7 @@ export class LoginPage implements OnInit {
   //declaramos un atributo
   formularioLogin: FormGroup;
 
-  constructor(public fb: FormBuilder) {
+  constructor(private authSvc: AuthService, private router: Router,public fb: FormBuilder) {
     //inicializamos el formulario pasando los campos del form
 
     this.formularioLogin=this.fb.group({
@@ -28,5 +31,45 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-
+  async onLogin(email, password) {
+    try {
+      const user = await this.authSvc.login(email.value, password.value);
+      if (user) {
+        const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
+      }
+    } catch (error) {
+      console.log('Error->', error);
+    }
+  }
+  async onLoginGoogle() {
+    try {
+      const user = await this.authSvc.loginGoogle();
+      if (user) {
+        const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
+      }
+    } catch (error) {
+      console.log('Error->', error);
+    }
+  }
+  async onLoginFacebook() {
+    try {
+      const user = await this.authSvc.loginFacebook();
+      if (user) {
+        const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
+      }
+    } catch (error) {
+      console.log('Error->', error);
+    }
+  }
+  private redirectUser(isVerified: boolean): void {
+    if (isVerified) {
+      this.router.navigate(['folder/Bienvenidos']);
+    } else {
+      Swal.fire('Verificación de Correo',
+      'Revisar su correcto electronico','info');
+    }
+  }
 }

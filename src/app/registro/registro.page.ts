@@ -6,7 +6,10 @@ import {
   Validators,
   FormBuilder
  } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import Swal from 'sweetalert2';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -14,36 +17,31 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
-  //declaramos un atributo
-  formularioRegistro: FormGroup;
 
-  constructor(public fb: FormBuilder,
-    public alertController: AlertController) {
-    //inicializamos el formulario pasando los campos del form
-    this.formularioRegistro = this.fb.group({
-        nombre: new FormControl('',Validators.required),
-        password: new FormControl('',Validators.required),
-        confirmacionPassword: new FormControl('',Validators.required)
-    });
+  constructor(private authSvc: AuthService, private router: Router) { }
 
-   }
-
-  ngOnInit(){
+  ngOnInit() {
   }
-  //mensage de los datos de registros si es invalido//
-  async guardar(){
-    const f = this.formularioRegistro.value;
-
-    if(this.formularioRegistro.invalid){
-      const alert = await this.alertController.create({
-        header:'"ERROR DE CASILLAS"',
-        message: 'Debes completar los datos.',
-        buttons: ['Aceptar']
-      });
-
-      await alert.present();
-      return;
+  async onRegister(email, password) {
+    try {
+      const user = await this.authSvc.register(email.value, password.value);
+      if (user) {
+        const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
+      }
+    } catch (error) {
+      console.log('Error', error);
     }
   }
 
+  private redirectUser(isVerified: boolean): void {
+    if (isVerified) {
+      this.router.navigate(['Folder/Bienvenidos']);
+    } else {
+      Swal.fire('Verificación de Correo',
+      'Revisar su correcto electronico','info');
+      this.router.navigate(['login']);
+    }
+  }
 }
+

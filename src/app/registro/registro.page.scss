@@ -12,3 +12,14 @@ ion-header{
 ion-item{
     background-color: #F78229;
 }
+.login input{
+    background-color: white !important;
+    border-radius: 20px;
+    margin-top: 15px;
+    height: 35px;
+    width: 100%;
+    color: #8F9094;
+    border: none;
+    display: flex;
+    flex-flow: column wrap;
+  }
