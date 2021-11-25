@@ -15,6 +15,7 @@ export class AppComponent {
     { title: 'Terremoto', url: 'terremoto', icon: 'barcode' },
     { title: 'Despeje de Árbol', url: 'despeje', icon: 'leaf' },
     { title: 'Albergues', url: 'albergues', icon: 'home' },
+    { title: 'Visualizar Huracanes', url: 'huracanes', icon: 'thunderstorm'},
   ];
 
   constructor() {}

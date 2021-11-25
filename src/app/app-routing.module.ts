@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'folder/Bienvenidos',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
   },
   {
     path: 'login',
@@ -30,38 +30,42 @@ const routes: Routes = [
   {
     path: 'deslizamiento',
     loadChildren: () => import('./deslizamiento/deslizamiento.module').then( m => m.DeslizamientoPageModule),
-    canActivate: [AuthGuard],
+    /* canActivate: [AuthGuard], */
   },
   {
     path: 'inundaciones',
     loadChildren: () => import('./inundaciones/inundaciones.module').then( m => m.InundacionesPageModule),
-    canActivate: [AuthGuard],
+    /* canActivate: [AuthGuard], */
   },
   {
     path: 'rescate',
     loadChildren: () => import('./rescate/rescate.module').then( m => m.RescatePageModule),
-    canActivate: [AuthGuard],
+    /* canActivate: [AuthGuard], */
   },
   {
     path: 'desaparecidos',
     loadChildren: () => import('./desaparecidos/desaparecidos.module').then( m => m.DesaparecidosPageModule),
-    canActivate: [AuthGuard],
+    /* canActivate: [AuthGuard], */
   },
   {
     path: 'terremoto',
     loadChildren: () => import('./terremoto/terremoto.module').then( m => m.TerremotoPageModule),
-    canActivate: [AuthGuard],
+   /*  canActivate: [AuthGuard], */
   },
   {
     path: 'despeje',
     loadChildren: () => import('./despeje/despeje.module').then( m => m.DespejePageModule),
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
   },
   {
     path: 'albergues',
     loadChildren: () => import('./albergues/albergues.module').then( m => m.AlberguesPageModule),
-    canActivate: [AuthGuard],
+    /* canActivate: [AuthGuard], */
+  },  {
+    path: 'huracanes',
+    loadChildren: () => import('./huracanes/huracanes.module').then( m => m.HuracanesPageModule)
   }
+
 ];
 
 @NgModule({

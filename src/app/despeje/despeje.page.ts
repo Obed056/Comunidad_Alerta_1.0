@@ -22,11 +22,7 @@ export class DespejePage implements OnInit {
    this.services.insertarDespeje(DespejeForm.value);
    this.resetForm(DespejeForm);
   
-   Swal.fire(
-    'Alerta Enviada',
-    'Reporte Enviado',
-    'success'
-  )
+   this.services.mensaje();
   
   }
   resetForm(DespejeForm: NgForm){

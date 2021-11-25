@@ -1,5 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="end">
+     <!--  <a href="../login/login.page.html"><i class="fas fa-sign-out-alt"></i></a> -->
+      <button class="icoSalir" (click)="logout()"><i class="fas fa-sign-out-alt"></i></button>
+    </ion-buttons>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>

@@ -8,43 +8,59 @@
 </ion-header>
 
 <ion-content>
-  <div class="contenedor">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Datos</ion-card-title>
-      </ion-card-header>
+  <div id="contenedor">
+    <div class="container">
       <ion-card-content>
-      <!--   <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
-          <ion-item>
-            <ion-label  position="floating">Nombre</ion-label>
-            <ion-input formControlName="nombre"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input formControlName="password" type="password"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Confirmar contraseña</ion-label>
-            <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
-          </ion-item>
-          <br>
-          <ion-button (click)="guardar()">Registrarse</ion-button>
-        </form> -->
-        <form>
+        <!-- <form>
+
          <div class="login">
+          <div class="usuario">
+            
+          <i class="far fa-user"></i>
           <input type="text" #email required placeholder="Usuario">
-          <input type="password" #password required placeholder="Contraseña">
+          
+          </div>
+          <div class="usuario">
+            <i class="fas fa-key"></i>
+            <input type="password" #password required placeholder="Contraseña">
+          </div>
          </div>
           <ion-row>
             <ion-col>
               <ion-button type="submit" (click)="onRegister(email, password)" expand="block">Register</ion-button>
             </ion-col>
           </ion-row>
-        </form>
+        </form> -->
+        <div id="contenedor">
+          <div class="registro overflow-hidden">
+            <div class="inpuntregistro">
+              <div class="usuario">
+                <!-- <input type="text" #email required placeholder="Usuario"> -->
+              <i class="far fa-user"></i>
+              <input type="text" #email required placeholder="Correo">
+              </div>
+              <div class="usuario">
+                <i class="fas fa-key"></i>
+                <input type="password" #password required placeholder="Contraseña">
+              </div>
+              <div class="crear">
+               <ion-button type="submit" (click)="onRegister(email, password)" expand="block">Register</ion-button>
+              </div>
+            </div>
+          </div>
+    
+      </div>
       </ion-card-content>
-      <ion-card-title class="text-down">Defensa Civil Dominicana</ion-card-title>
-    </ion-card>
-    <br>
+    </div>
+     
+     
+   
   </div>
-  
 </ion-content>
+<!-- <img src="../../assets/img/pruebaaaA.png" alt=""> -->
+
+
+
+
+  
+

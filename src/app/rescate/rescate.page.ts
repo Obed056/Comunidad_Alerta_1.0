@@ -21,11 +21,7 @@ export class RescatePage implements OnInit {
   OnSubmit(RescateForm: NgForm){
    this.services.insertarRescate(RescateForm.value);
    this.resetForm(RescateForm)
-   Swal.fire(
-    'Alerta Enviada',
-    'Reporte Enviado',
-    'success'
-  )
+   this.services.mensaje();
   
   }
   resetForm(RescateForm: NgForm){
