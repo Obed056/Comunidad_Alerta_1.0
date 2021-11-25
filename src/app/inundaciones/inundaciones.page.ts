@@ -21,12 +21,7 @@ export class InundacionesPage implements OnInit {
   OnSubmit(InundacionForm: NgForm){
    this.services.insertarInundaciones(InundacionForm.value);
    this.resetForm(InundacionForm);
-  
-   Swal.fire(
-    'Alerta Enviada',
-    'Reporte Enviado',
-    'success'
-  )
+   this.services.mensaje();
   
   }
   resetForm(InundacionForm: NgForm){

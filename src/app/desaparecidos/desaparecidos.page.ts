@@ -22,12 +22,7 @@ export class DesaparecidosPage implements OnInit {
    this.services.insertarDesaparecido(DesaparecidoForm.value);
   
    this.resetForm(DesaparecidoForm);
-  
-   Swal.fire(
-    'Alerta Enviada',
-    'Reporte Enviado',
-    'success'
-  )
+   this.services.mensaje();
   
   }
   resetForm(DesaparecidoForm: NgForm){

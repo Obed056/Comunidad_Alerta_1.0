@@ -5,50 +5,7 @@
 </ion-header> -->
 
 <ion-content>
-  <div class="contenedor overflow-hidden">
-   <!--  <ion-item-img>
-    <img class="imgLogo" src="assets/img/logodc.PNG"></ion-item-img>
-
-  <ion-card-header class="InicieLogin">
-    <ion-card-title> <strong>COMUNIDAD ALERTA</strong></ion-card-title>
-    <ion-labeL id="fraseLogin">Apoyando la comunidad ante eventos de desastre</ion-labeL>
-  </ion-card-header> -->
-
-  <!--<ion-card class="cardLog">-->
-   <!--  <form class="formLogin" [formGroup]="formularioLogin">
-      <ion-item class="itemNLogin">
-        <ion-icon class="personIcon" name="person-outline"></ion-icon>
-        <ion-input placeholder="Introduzca su usuario" ></ion-input>
-      </ion-item>
-      <ion-item class="itemPLogin">
-        <ion-icon class="iconloked" name="lock-closed-outline"></ion-icon>
-        <ion-input placeholder="Introduzca su contraseña"></ion-input>
-      </ion-item>
-    </form> -->
-    
-    <!-- <br>
-    <ion-toolbar class="toolbarbtnIniciar">
-      <ion-buttons class="btnIniciar">
-        <ion-button class="LetrabtnIniciar" type="submit" (click)="onLogin(email, password)">INICIAR</ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-    <ion-toolbar class="toolbarbtnIniciarg">
-      <ion-buttons class="btnIniciar">
-        <ion-button class="LetrabtnIniciar" type="submit" (click)="onLoginGoogle()" >INICIAR con Google</ion-button>
-      </ion-buttons>
-    </ion-toolbar> -->
-
-
-      
-    <!--</ion-card>-->
-    <!--  <div class="fraseCuenta">
-      <ion-labeL>No tienes cuenta?</ion-labeL>
-    </div>
-      <ion-toolbar class="toolbarbtn">
-        <ion-buttons class="btnCrear">
-          <ion-button size="large" class="LetrabtnCrear" [routerLink]="['/registro']">CREAR</ion-button>
-        </ion-buttons>
-      </ion-toolbar> -->
+  <div id="contenedor">
       <div class="imglogin">
           <img class="imgLogo" src="assets/img/logodc.PNG">
         <ion-card-header class="InicieLogin">
@@ -56,26 +13,26 @@
           <p id="fraseLogin">Apoyando la comunidad ante eventos de desastre</p>
         </ion-card-header>
       </div>
-
+    
       <div class="login overflow-hidden">
-        <div class="usuario">
-          <!-- <input type="text" #email required placeholder="Usuario"> -->
-        <i class="far fa-user"></i>
-        <input type="text" #email required placeholder="Usuario">
+        <div class="inpuntlogin">
+          <div class="usuario">
+            <!-- <input type="text" #email required placeholder="Usuario"> -->
+          <i class="far fa-user"></i>
+          <input type="text" #email required placeholder="Usuario">
+          </div>
+          <div class="usuario">
+            <i class="fas fa-key"></i>
+            <input type="password" #password required placeholder="Contraseña">
         
+          </div>
         </div>
-        <div class="usuario">
-          <i class="fas fa-key"></i>
-          <input type="password" #password required placeholder="Contraseña">
-      
-        </div>
-        
         
           <ion-buttons class="btnlogin" >
             <ion-button class="LetrabtnIniciar" type="submit" (click)="onLogin(email, password)">INICIAR</ion-button>
           </ion-buttons>
         
-        <h2>----------------or----------------</h2>
+        <h2>----------------o----------------</h2>
         <div class="iconoPage">
           <div class="ico">
             <img width="30 dp" class="imgfondo"  src="assets/img/google.png"(click)="onLoginGoogle()">

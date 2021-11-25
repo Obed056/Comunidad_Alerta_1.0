@@ -1,8 +1,11 @@
 
-.contenedor{
-  background-color: #F78229;
+#contenedor{
   height: 100%;
   width: 100%;
+  background-image: url(../../assets/img/logo.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .imglogin{
   display: flex;
@@ -12,21 +15,23 @@
 
 }
 .imgLogo{
-  width: 153px;
-  height: 153px;
+  width: 113px;
+  height: 113px;
+  margin-top: 14%;
 }
 .InicieLogin strong{
   display: flex;
   justify-content: center;
-  color: white;
+  color: #070707;
   font-size: 26px;
+  margin-top: -15px;
  
 }
 .InicieLogin #fraseLogin{
   font-size: 10px;
   display: flex;
   justify-content: center;
-  color: #e2dfdd;
+  color: #070707;
 }
 .login input{
   background-color: white !important;
@@ -54,9 +59,10 @@
   text-align: center;
 }
 h2{
-color: #ffff;
+color: rgb(175, 171, 171);
 display: flex;
 justify-content: center;
+margin-top: -6px;
 }
 
 .ico{
@@ -66,7 +72,7 @@ justify-content: center;
   height: 50px !important;
   display: inline-flex;
   margin-left: 7%;
-
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
 
 }
 .ico img{
@@ -85,25 +91,31 @@ justify-content: center;
 .fraseCuenta{
   display: flex;
   justify-content: center;
+  color: #070707;
 
 }
 .btnCrear{
   display: flex;
   justify-content: center;
+  color: #070707;
+  margin-top: -20px;
  
 }
 .usuario{
   background-color: white !important;
   border-radius: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
   height: 35px;
   width: 70%;
   color: #8F9094;
-  border: none;
   display: flex;
   flex-flow: column wrap;
   margin-left: 15%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
 }
 .usuario i{
   padding: 10px;
+}
+.inpuntlogin{
+  margin-top: -20px;
 }

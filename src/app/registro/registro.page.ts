@@ -17,7 +17,7 @@ import { AuthService } from '../Services/auth.service';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
-
+ 
   constructor(private authSvc: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -33,7 +33,6 @@ export class RegistroPage implements OnInit {
       console.log('Error', error);
     }
   }
-
   private redirectUser(isVerified: boolean): void {
     if (isVerified) {
       this.router.navigate(['Folder/Bienvenidos']);

@@ -7,6 +7,7 @@ import {
   FormBuilder
  } from '@angular/forms';
 import { Router } from '@angular/router';
+import { menuController } from '@ionic/core';
 import Swal from 'sweetalert2';
 import { AuthService } from '../services/auth.service';
 
@@ -30,6 +31,7 @@ export class LoginPage implements OnInit {
    }
 
   ngOnInit() {
+    menuController.enable(false);
   }
   async onLogin(email, password) {
     try {
@@ -67,6 +69,7 @@ export class LoginPage implements OnInit {
   private redirectUser(isVerified: boolean): void {
     if (isVerified) {
       this.router.navigate(['folder/Bienvenidos']);
+      menuController.enable(true);
     } else {
       Swal.fire('Verificación de Correo',
       'Revisar su correcto electronico','info');

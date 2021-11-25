@@ -1,0 +1,28 @@
+#contenedor{
+    height: 100%;
+    width: 100%;
+    background-image: url(../../assets/img/fondo_huracan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+.imgfondo{
+    position: relative;
+
+}
+ion-card{
+    position: relative;
+    background-color: #ffff;
+    margin-top: -4px;
+    border-radius: 20px;
+   
+}
+.card{
+    height: 40px;
+}
+.i{
+    margin-top: -2px;
+}
+iframe{
+    height: 300px;
+}

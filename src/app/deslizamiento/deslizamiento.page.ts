@@ -21,12 +21,7 @@ export class DeslizamientoPage implements OnInit {
   OnSubmit(DeslizamientoForm: NgForm){
    this.services.insertarDeslizamiento(DeslizamientoForm.value);
    this.resetForm(DeslizamientoForm);
-  
-   Swal.fire(
-    'Alerta Enviada',
-    'Reporte Enviado',
-    'success'
-  )
+  this.services.mensaje();
   
   }
   resetForm(DeslizamientoForm: NgForm){

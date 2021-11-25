@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+import Swal from 'sweetalert2';
 import { Logica } from '../models/logica';
 
 @Injectable({
@@ -135,5 +136,12 @@ export class FirebaseServiceService {
       telefono: logica.telefono,
       descripcion: logica.descripcion
     });
+  }
+  public mensaje(){
+    Swal.fire(
+      'Se ha enviado su mensaje!',
+      'En unos momentos un representante se pondrá en contacto con usted, mantenga su número de contacto al alcance',
+      'success'
+    )
   }
 }

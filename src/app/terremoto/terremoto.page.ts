@@ -21,11 +21,7 @@ export class TerremotoPage implements OnInit {
   OnSubmit(terremotoForm: NgForm){
    this.services.insertarTerremoto(terremotoForm.value);
    this.resetForm(terremotoForm);
-   Swal.fire(
-     'Alerta Enviada',
-     'Reporte Enviado',
-     'success'
-   )
+    this.services.mensaje();
 
   }
 

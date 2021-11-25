@@ -1,5 +1,7 @@
 {
   "name": "Comunidad_Alerta_1.0",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

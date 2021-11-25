@@ -1,25 +1,52 @@
-.contenedor{
-  background-color: #F78229;
+#contenedor{
   height: 100%;
   width: 100%;
+  background-image: url(../../assets/img/fondo_registro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
-.contenedor ion-card{
-    top:100px;
+.registro input{
+  background-color: white !important;
+  border: none;
+  height: 35px;
+  width: 70%;
+  color: #8F9094;
+  border: none;
+  display: flex;
+  flex-flow: column wrap;
+  outline: none;
+  margin-right: 40px;
 }
-ion-header{
-    height: 0;
+.usuario{
+  overflow: hidden;
+  background-color: white !important;
+  border-radius: 20px;
+  margin-top: 20px;
+  height: 35px;
+  width: 70%;
+  color: #8F9094;
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 15%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
 }
-ion-item{
-    background-color: #F78229;
+.usuario i{
+  padding: 10px;
 }
-.login input{
-    background-color: white !important;
-    border-radius: 20px;
-    margin-top: 15px;
-    height: 35px;
-    width: 100%;
-    color: #8F9094;
-    border: none;
-    display: flex;
-    flex-flow: column wrap;
+  .inpuntregistro{
+    margin-top: 100px;
   }
+.crear{
+  margin-top: 20px;
+  width: 70%;
+  margin-left: 48px;
+
+  
+}
+.crear button{
+  background-color: #004C98;
+  width: 90%;
+  height: 35px;
+  border-radius: 20px;
+}
